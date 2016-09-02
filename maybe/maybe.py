@@ -248,7 +248,7 @@ def main(argv=sys.argv[1:]):
                 # Ctrl+C does not print a newline automatically
                 print("")
             if choice.lower() == "y":
-                subprocess.call(args.command)
+                return subprocess.call(args.command)
     else:
         print("%s has not detected any file system operations from %s." %
               (T.bold("maybe"), T.bold(command)))
